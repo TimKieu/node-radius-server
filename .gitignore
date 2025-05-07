@@ -9,3 +9,4 @@ tsconfig.tsbuildinfo
 
 # custom certificates
 /ssl-*/
+pnpm-lock.yaml
