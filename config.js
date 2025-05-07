@@ -24,8 +24,23 @@ export default {
 		// sesionIdContext: 'meiasdfkljasdft!',
 		// ticketKeys: Buffer.from('123456789012345678901234567890123456789012345678'),
 	},
+	/** static auth */
+	authentication: 'StaticAuth',
+	authenticationOptions: {
+		validCredentials: [
+			{ username: 'test@hokify.com', password: 'test' },
+			{ username: 'user1@asdf.com', password: 'password' },
+			{ username: 'admin@hallo.com', password: 'cool' },
+		],
+	},
+	/** HTTP AUTH 
+	authentication: 'HTTPAuth',
+	authenticationOptions: {
+		url: 'https://my-website.com/api/backend-login'
+	}
+	*/
 
-	// GoogleLDAPAuth (optimized for google auth)
+	/**  GoogleLDAPAuth (optimized for google auth)
 	authentication: 'GoogleLDAPAuth',
 	authenticationOptions: {
 		base: 'dc=hokify,dc=com',
@@ -35,7 +50,7 @@ export default {
 			certFile: 'ldap.gsuite.crt',
 		},
 	},
-
+	*/
 	/** LDAP AUTH 
 	authentication: 'LDAPAuth',
 	authenticationOptions: {
@@ -51,18 +66,6 @@ export default {
 		},
 	}, 
 	 */
-
-	/** static auth 
-	authentication: 'StaticAuth',
-	authenticationOptions: {
-		validCredentials: [
-			{ username: 'test@hokify.com', password: 'test' },
-			{ username: 'user1@asdf.com', password: 'password' },
-			{ username: 'admin@hallo.com', password: 'cool' },
-		],
-	},
-	 */
-
 	/** VLAN CONFIG
 	vlan: 400,
 	 */
@@ -76,11 +79,4 @@ export default {
 		validHosts: ['gmail.com']
 	}
 	 */
-
-	/** HTTP AUTH 
-	authentication: 'HTTPAuth',
-	authenticationOptions: {
-		url: 'https://my-website.com/api/backend-login'
-	}
-	*/
 };
